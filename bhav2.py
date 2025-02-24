@@ -11,6 +11,7 @@ Write a menu driven program to perform the following operations in list:
 '''
 
 
+
 while True:
     print("List Operation Menu ")
     print()
@@ -30,4 +31,10 @@ while True:
     
     if ch == 2:
         element=input("Enter The Element: ")
-        lst
+        lst = lst.append(element)
+        print("Element Added")
+    
+    elif ch == 3:
+        n = int(input("Enter Number of elements: "))
+        for i in range(n):
+            element = input("Enter the Element: ")
