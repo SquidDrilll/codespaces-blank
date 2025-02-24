@@ -1,0 +1,55 @@
+my_list = []  # Start with an empty list
+
+while True:
+    print("\nList Operations Menu:")
+    print("1. Create Empty List")
+    print("2. Add Single Element")
+    print("3. Add n no. of Elements")
+    print("4. Search Element")
+    print("5. Modify Element")
+    print("6. Delete Element")
+    print("7. Exit")
+
+    choice = input("Enter your choice: ")
+
+    if choice == '1':  # Create Empty List
+        my_list = []
+        print("List cleared.")
+
+    elif choice == '2':  # Add Single Element
+        element = input("Enter element to add: ")
+        my_list.append(element)
+
+    elif choice == '3':  # Add n no. of Elements
+        num_elements = int(input("Enter number of elements to add: "))
+        for _ in range(num_elements):
+            element = input("Enter element: ")
+            my_list.append(element)
+
+    elif choice == '4':  # Search Element
+        element = input("Enter element to search: ")
+        if element in my_list:
+            print("Element found at index:", my_list.index(element))
+        else:
+            print("Element not found.")
+
+    elif choice == '5':  # Modify Element
+        index = int(input("Enter index to modify: "))
+        if 0 <= index < len(my_list):
+            element = input("Enter new element: ")
+            my_list[index] = element
+        else:
+            print("Invalid index.")
+
+    elif choice == '6':  # Delete Element
+        element = input("Enter element to delete: ")
+        if element in my_list:
+            my_list.remove(element)
+        else:
+            print("Element not found.")
+
+    elif choice == '7':  # Exit
+        break
+
+    else:
+        print("Invalid choice.")
